@@ -40,7 +40,8 @@
 }
 
 - (void)init:(FlutterMethodCall*)call result:(FlutterResult)result{
-    [MobClick setCrashReportEnabled:call.arguments[@"catchUncaughtExceptionsEnabled"]];
+//     UMCCommon-v7.2.2 released on 2020.10.15,  setCrashReportEnabled in MobClick.h has been removed
+//     [MobClick setCrashReportEnabled:call.arguments[@"catchUncaughtExceptionsEnabled"]];
     NSString* pageCollectMode = call.arguments[@"pageCollectMode"];
     if([@"MANUAL" isEqualToString:pageCollectMode]){
         [MobClick setAutoPageEnabled:NO];
